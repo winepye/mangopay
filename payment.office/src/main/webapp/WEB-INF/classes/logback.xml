@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <include file="${CORE_CONFIG_PATH}/mpsolutions_config.xml" />
+
+    <if condition='"${prop.server.mode}".equals("local")'>
+        <then>
+            <property name="LOG_PATH" value="${local.prop.log_path}" />
+        </then>
+    </if>
+    <if condition='"${prop.server.mode}".equals("dev")'>
+        <then>
+            <property name="LOG_PATH" value="${dev.prop.log_path}" />
+        </then>
+    </if>
+    <if condition='"${prop.server.mode}".equals("real")'>
+        <then>
+            <property name="LOG_PATH" value="${real.prop.log_path}" />
+        </then>
+    </if>
+
+    <property name="LOG_FILE_NAME" value="office" />
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <!-- To enable JMX Management -->
+    <jmxConfigurator />
+
+    <!-- Console Log Setting -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{yyyyMMdd HH:mm:ss}] [%-5level] [%logger{0}.%method:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Rolling Setting -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${LOG_FILE_NAME}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${LOG_PATH}/${LOG_FILE_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- 100MB 는 지움 -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%d{yyyyMMdd HH:mm:ss}] [%-5level] %logger{0}.%method -- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 톰캣 세션 로그(live check) 남지 않게 하는 설정 -->
+    <logger name="org.apache.catalina.session.ManagerBase" additivity="false">
+        <level value="INFO" />
+    </logger>
+
+    <logger name="org.springframework" level="ERROR" >
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </logger>
+
+
+    <logger name="org.apache.commons.httpclient">
+        <level value="fatal"/>
+    </logger>
+
+    <!--  INFO 이상일때만 콘솔과 로그 출력 -->
+    <if condition='"${prop.server.mode}".equals("real")'>
+        <then>
+            <root level="INFO" additivity="false">
+                <appender-ref ref="CONSOLE" />
+                <appender-ref ref="FILE" />
+            </root>
+        </then>
+        <else>
+            <root level="DEBUG" additivity="false">
+                <appender-ref ref="CONSOLE" />
+                <appender-ref ref="FILE" />
+            </root>
+        </else>
+    </if>
+</configuration>
+

@@ -1,0 +1,290 @@
+body{margin:0px;font-size:12px; font-family:Dotum,verdana; color:#333333; overflow-y:scroll;background:url('../images/bg.gif') repeat-x;
+
+
+
+scrollbar-base-color:#FFFFFF;
+
+scrollbar-face-color: #FFFFFF; 
+
+scrollbar-arrow-color: #7C7C7C;
+
+scrollbar-track-color: #FFFFFF;
+
+scrollbar-highlight-color: #BFBFBF;
+
+scrollbar-shadow-color: #BFBFBF;
+
+scrollbar-darkshadow-color: #FFFFFF;
+
+scrollbar-3dlight-color: #FFFFFF;
+
+
+
+}
+
+
+
+
+
+/* public */
+
+td {font-size:12px; font-family:Dotum;  color:#666666; word-break:break-all; word-wrap:break-word;}
+
+img {border:0} /* 이미지 보더 제거 */
+
+.b {font-weight:bold} /* 굵게 */
+
+.s {font-size:11px} /* 작게 */
+
+.ss {font-size:10px} /* 더작게 */
+
+.sss {font-size:9px} /* 더더작게 */
+
+.n {font-size:12px} /*원래크기 */
+
+.l {font-size:14px} /* 크게 */
+
+.ll {font-size:16px} /* 더크게 */
+
+.lll {font-size:18px} /* 더크게 */
+
+.v {font-family:verdana;}
+
+.dd {font-family:돋움;}
+
+.l14{line-height:14px}
+
+.l12{line-height:12px}
+
+.l13{line-height:13px}
+
+.l15{line-height:15px}
+
+.l16{line-height:16px}
+
+.l17{line-height:17px}
+
+.l18{line-height:18px}
+
+.l19{line-height:19px}
+
+.l150{line-height:160%}
+
+.l20{line-height:20px}
+
+.l22{line-height:22px}
+
+
+
+.g{font-family:굴림}
+
+.gg{font-family:궁서}
+
+.let{letter-spacing:-1px}
+
+.let_m{letter-spacing:-2px}
+
+.let_p{letter-spacing:3px}
+
+.over {text-decoration: line-through}
+
+.un {text-decoration: underline}
+
+.c {text-align: center}
+
+.r {text-align: right}
+
+.top {vertical-align:top;}
+
+.pad_t1{padding-top:1px}
+
+.pad_t2{padding-top:2px}
+
+.pad_t3{padding-top:3px}
+
+.pad_t4{padding-top:4px}
+
+.pad_t5{padding-top:5px}
+
+.pad_t6{padding-top:6px}
+
+.pad_t8{padding-top:8px}
+
+
+
+/*색상*/
+
+.f_fff {color:#ffffff}
+
+.f_00 {color:#000000}
+
+.f_d4 {color:#d4d4d4}
+
+.f_3b {color:#3B3B3B}
+
+.f_33 {color:#333333}
+
+.f_75 {color:#757575}
+
+.f_71 {color:#717171}
+
+.f_7d {color:#7d7d7d}
+
+.f_59 {color:#595959}
+
+.f_5e {color:#5e5e5e}
+
+.f_66 {color:#666666}
+
+.f_57 {color:#575757}
+
+.f_8f {color:#8F8F8F}
+
+.f_e0 {color:#e0e0e0}
+
+.f_nevi {color:#715253}
+
+
+
+.f_bb {color:#694F2E}
+
+.f_bb2 {color:#715253}
+
+.f_bb3 {color:#45362B}
+
+
+
+.f_blue {color:#7656D0}
+
+.f_blue2 {color:#156B92}
+
+
+
+.f_ora {color:#D64910}
+
+
+
+
+
+
+
+
+
+
+
+.menu_back{
+
+	background:url('../images/menu_back.gif');
+
+	width:137px;
+
+	height:21px;
+
+	color:#ffffff;
+
+	padding:3px 0 0 20px;
+
+	font-weight:bold;
+
+}
+
+
+
+
+
+/*admin*/
+
+.box_01 {background:EFEFEF;padding:3 0 0 19}
+
+.box_01_s {background:EFEFEF;padding:3 0 0 14}
+
+.box_01_c {background:EFEFEF;padding:3 0 0 0;text-align: center}
+
+
+
+.box_02 {padding:8 0 5 11;vertical-align:top;}
+
+.box_03 {padding:0 0 0 11}
+
+.list_w_line{border-right:1px solid #D1D1D1}
+
+.list_w_line_end {border-right:0px}
+
+ 
+
+/*member*/
+
+.box_04 {background:FFFFFF;padding:0 0 0 16}
+
+.box_05 {background:F8F8F8;padding:0 0 0 15}
+
+.box_06 {background:F8F8F8;padding:11 0 0 15}
+
+.box_07 {background:FFFFFF;padding:12 0 0 15}
+
+
+
+/*링크값들*/
+
+
+
+/* Basic Link */
+
+
+
+A:link        {color:#736357; text-decoration:none}
+
+A:visited     {color:#736357; text-decoration:none}
+
+A:active      {color:#736357; text-decoration:none}
+
+A:hover       {color:#000; text-decoration:none}
+
+
+
+.f_71 A:link        {color:#717171; text-decoration:none}
+
+.f_71 A:visited     {color:#717171; text-decoration:none}
+
+.f_71 A:active      {color:#717171; text-decoration:none}
+
+.f_71 A:hover       {color:#000; text-decoration:none}
+
+
+
+A.f_fff:link        {color:#ffffff; text-decoration:none}
+
+A.f_fff:visited     {color:#ffffff; text-decoration:none}
+
+A.f_fff:active      {color:#ffffff; text-decoration:none}
+
+A.f_fff:hover       {color:#ffffff; text-decoration:none}
+
+
+
+
+
+
+
+/*input 스타일*/
+
+.input {border:1px solid #B8B8B8;background:#ffffff;padding-left:3px;}
+
+.input_b {border:1px solid #C9C097;background:#ffffff;padding-left:3px;height:18px}
+
+.input_b2 {border:1px solid #DCDCDC;background:#F0F0F0;padding-left:3px;}
+
+.input_s {border:1px solid #DCDCDC;background:#F7F7F7;padding-left:3px;}
+
+.input_s2 {border:1px solid #CCCCCC;background:#F7F7F7;}
+
+
+
+.input_wb {border:1px solid #DADADA;padding-left:3px;}
+
+
+
+.select{BEHAVIOR: url('css/selectbox1.htc'); CURSOR: hand }
+
+
+

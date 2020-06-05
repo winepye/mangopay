@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+  <context:annotation-config />
+
+    <mvc:interceptors>
+       <mvc:interceptor>
+            <mvc:mapping path="/admin/*/*/*.do" />
+            <mvc:mapping path="/admin/*/*.do" />
+            <bean class="kr.co.smartdatacorp.web.bean.interceptor.AdminInterceptor" />
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/*/*/*.do" />
+            <mvc:mapping path="/*/*.do" />
+            <bean class="kr.co.smartdatacorp.web.bean.interceptor.FrontInterceptor" />
+        </mvc:interceptor>
+
+      <!--  개발용 로그인을 위해...삭제할것
+        <mvc:interceptor>
+            <mvc:mapping path="/admin/**/*.admin_tlf" />
+            <bean class="kr.co.smartdatacorp.web.bean.interceptor.AdminInterceptor" />
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/*/*.front_tlf" />
+            <bean class="kr.co.smartdatacorp.web.bean.interceptor.FrontInterceptor" />
+        </mvc:interceptor>
+
+
+        <bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+            <property name="cacheSeconds" value="0" />
+            <property name="useExpiresHeader" value="true" />
+            <property name="useCacheControlHeader" value="true" />
+            <property name="useCacheControlNoStore" value="true" />
+                       예외처리 하여 캐쉬 적용이 가능 하다.
+                 <property name="cacheMappings">
+                               <props>
+                                  <prop key="/test/test/**">86400</prop>
+                               </props>
+                  </property>
+    	</bean>
+-->
+
+    </mvc:interceptors>
+</beans>

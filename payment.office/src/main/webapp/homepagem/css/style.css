@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0; }
+li { list-style:none; }
+img { vertical-align:top; }
+a { text-decoration:none; }
+
+/* header */
+header { position:fixed; width:100%; height:90px; background:#fff; z-index:99; }
+.blank { height:90px; }
+header h1 { text-align:center; }
+header h1 img { height:90px; }
+#nav_btn { position:absolute; right:3%; top:24px; }
+#nav_btn .line{  width: 50px; height: 4px; background-color: #ccc; display: block; margin: 8px auto; transition: all 0.3s ease-in-out;}
+#nav_btn:hover{ cursor: pointer;}
+#nav_btn.act .line:nth-child(2){ opacity: 0;}
+#nav_btn.act .line:nth-child(1){ transform: translateY(12px) rotate(45deg);}
+#nav_btn.act .line:nth-child(3){ transform: translateY(-12px) rotate(-45deg);}
+#w_gnb { position:fixed; width:100%; height:calc(100% - 90px); background:rgba(0,0,0,0.8); padding:40px; box-sizing:border-box; right:-100%; text-align:center; transition:0.3s; }
+#w_gnb.act { right:0; }
+#w_gnb > li { border-bottom:1px solid #ddd; }
+#w_gnb > li > a { color:#fff; font-size:20px;  display:block; line-height:60px; }
+#w_gnb ul { display:none; }
+#w_gnb ul li a { color:#ccc; font-size:18px;  display:block; line-height:50px;}
+
+/* footer */
+footer { background:#eee; font-size:12px; padding:20px 3%; color:#666; line-height:1.6; }
+
+/* common */
+section img { width:100%; }
+
+/* sub5 */
+.sub5 ul:after { content:""; clear:both; display:block; }
+.sub5 ul li { float:left; width:25%; box-sizing:border-box; border-right:1px solid #ddd; }
+.sub5 ul li:last-child { border-right:none; }
+.sub5 ul li a { color:#333; word-break:keep-all; font-size:14px; border-top:4px solid #ddd; background:#efefef; text-align:center; display:flex; align-items:center; justify-content:center; height:50px; }
+.sub5 ul li .select { border-top:4px solid #feb300; background:#fff; }
+
+#text p { font-size:18px; font-weight:bold; color:#333; margin-bottom:4px; padding:0 3%; }
+#text span { display:block; padding:0 5%; line-height:1.6; margin-bottom:20px; font-size:14px; color:#666; word-break:keep-all; }
+#text span a { color:#666; }
+#text .tel { font-size:24px; font-style:italic; font-weight:bold; }
+#text p:first-of-type { padding-top:30px; }
+
+#notice table { border-collapse:collapse; width:96%; margin:30px auto 10px; font-size:14px;}
+#notice table th { background:#f7f7ec; height:40px; vertical-align:middle; border-top:1px solid #ddd; border-bottom:1px solid #ddd; }
+#notice table th:first-of-type { width:60px; }
+#notice table th:last-of-type { width:80px; }
+#notice table td { border-bottom:1px solid #ddd; height:40px; }
+#notice table td:first-child { text-align:center; }
+#notice .page { text-align:center; padding:10px 0 20px; font:normal 18px sans-serif; color:#666; }
+
+#con { font-size:14px; }
+#con p { color:#666; line-height:1.4; padding:0 3%; word-break:keep-all; }
+#con p b { color:#333; }
+#con span { display:block; line-height:1.4; color:#666; padding:0 3%; word-break:keep-all; }
+#con p:nth-of-type(1) { padding:20px 3%; }
+#con table th { background:#efefef; }
+#con #mail { width:94%; margin:0 auto; border-collapse:collapse; }
+#con #mail th, #con #mail td { border:1px solid #ddd;  padding:16px 10px;}
+#con #mail th { border-left:none; }
+#con #mail td { border-right:none; }
+#con #mail input { width:100%; height:30px; border:1px solid #ccc; }
+#con #mail textarea { width:100%; height:120px; border:1px solid #ccc; }
+#con .title { color:#333; font-size:16px; font-weight:bold; padding:30px 3% 10px; }
+#con #info {width:94%; margin:20px auto; border-collapse:collapse;}
+#con #info th, #con #info td { border:1px solid #ddd; padding:10px; text-align:center; word-break:keep-all; }
+#con #info td { color:#666; }
+#con #info th:first-child, #con #info td:first-child { border-left:none; }
+#con #info th:nth-child(3), #con #info td:nth-child(3) { border-right:none; }
+#con p:last-of-type { text-align:center; margin-top:30px; }
+#con input[type=submit] { width:240px; height:40px; border:none; color:#fff; background:#4d4d4d; border-radius:4px; margin:20px 0 40px; }
+#con input[type=button] { width:240px; height:40px; border:none; color:#fff; background:#4d4d4d; border-radius:4px; margin:20px 0 40px; }
+
+

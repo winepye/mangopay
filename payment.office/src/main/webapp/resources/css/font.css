@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'notokr-regular';
+    src: url('./font/notokr-regular.eot');
+    src: url('./font/notokr-regular.eot?#iefix') format('embedded-opentype'),
+         url('./font/notokr-regular.woff') format('woff'),
+         url('./font/notokr-regular.ttf') format('truetype'),
+         url('./font/notokr-regular.svg#notokr-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'notokr-medium';
+    src: url('./font/notokr-medium.eot');
+    src: url('./font/notokr-medium.eot?#iefix') format('embedded-opentype'),
+         url('./font/notokr-medium.woff') format('woff'),
+         url('./font/notokr-medium.ttf') format('truetype'),
+         url('./font/notokr-medium.svg#notokr-medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'notokr-bold';
+    src: url('./font/notokr-bold.eot');
+    src: url('./font/notokr-bold.eot?#iefix') format('embedded-opentype'),
+         url('./font/notokr-bold.woff') format('woff'),
+         url('./font/notokr-bold.ttf') format('truetype'),
+         url('./font/notokr-bold.svg#notokr-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* 나눔바른고딕 */
+@font-face
+{
+	font-family:"NanumBarun";
+	src:url('./font/NanumBarunGothicWeb.eot');
+    src:url('./font/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),
+        url('./font/NanumBarunGothicWeb.woff') format('woff'),
+		url("./font/NanumBarunGothicWeb.ttf") format("truetype");
+}
+@font-face
+{
+	font-family:"NanumBarunL";
+	src:url('./font/NanumBarunGothicWebUltraLight.eot');
+    src:url('./font/NanumBarunGothicWebUltraLight.eot?#iefix') format('embedded-opentype'),
+        url('./font/NanumBarunGothicWebUltraLight.woff') format('woff'),
+		url("./font/NanumBarunGothicWebUltraLight.ttf") format("truetype");
+}

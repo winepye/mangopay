@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="admin/*/*.admin_tlf" extends="layout_tlf_admin">
+		<put-attribute name="content" value="/WEB-INF/jsp/admin/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="admin/*/*.admin_tf" extends="layout_tf_admin">
+		<put-attribute name="content" value="/WEB-INF/jsp/admin/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="admin/*/*.admin_empty" extends="layout_empty_admin">
+		<put-attribute name="content" value="/WEB-INF/jsp/admin/{1}/{2}.jsp" />
+	</definition>
+
+	<definition name="admin/*/*/*.admin_empty" extends="layout_empty_admin">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/{1}/{2}/{3}.jsp" />
+    </definition>
+
+	<definition name="*/*.front_tlf" extends="layout_tlf_front">
+		<put-attribute name="content" value="/WEB-INF/jsp/front/{1}/{2}.jsp" />
+	</definition>
+	<definition name="*/*.front_tf_main" extends="layout_tf_front_main">
+        <put-attribute name="content" value="/WEB-INF/jsp/front/{1}/{2}.jsp" />
+    </definition>
+	<definition name="*/*.front_tf" extends="layout_tf_front">
+		<put-attribute name="content" value="/WEB-INF/jsp/front/{1}/{2}.jsp" />
+	</definition>
+	<definition name="*/*.front_m" extends="layout_m_front">
+		<put-attribute name="content" value="/WEB-INF/jsp/front/{1}/{2}.jsp" />
+	</definition>
+
+
+	<definition name="*/*.front_empty" extends="layout_empty_front">
+		<put-attribute name="content" value="/WEB-INF/jsp/front/{1}/{2}.jsp" />
+	</definition>
+	<definition name="*/*/*.front_empty" extends="layout_empty_front">
+		<put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<definition name="*/*.common_empty" extends="layout_empty_front">
+		<put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+	</definition>
+
+
+	<definition name="*.homepage_empty" extends="layout_empty_homepage">
+		<put-attribute name="content" value="/WEB-INF/jsp/homepage/{1}.jsp" />
+	</definition>
+	<definition name="*.homepage_m" extends="layout_m_homepage">
+		<put-attribute name="content" value="/WEB-INF/jsp/homepagem/{1}.jsp" />
+	</definition>
+
+
+
+</tiles-definitions>

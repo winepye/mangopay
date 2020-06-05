@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- ADMIN TOP, LEFT, FOOTER 레이아웃 -->
+	<definition name="layout_tlf_admin" template="/WEB-INF/jsp/layout/admin/layout_tlf.jsp">
+        <put-attribute name="header"	value="/WEB-INF/jsp/layout/admin/header.jsp"/>
+        <put-attribute name="top"		value="/WEB-INF/jsp/layout/admin/top.jsp"/>
+        <put-attribute name="left"      value="/WEB-INF/jsp/layout/admin/left.jsp"/>
+        <put-attribute name="content" 	value="/"/>
+        <put-attribute name="footer"    value="/WEB-INF/jsp/layout/admin/footer.jsp"/>
+    </definition>
+
+	<!-- FRONT TOP, LEFT, FOOTER 레이아웃 -->
+	<definition name="layout_tlf_front" template="/WEB-INF/jsp/layout/front/layout_tlf.jsp">
+        <put-attribute name="header"	value="/WEB-INF/jsp/layout/front/header.jsp"/>
+        <put-attribute name="top"		value="/WEB-INF/jsp/layout/front/top.jsp"/>
+        <put-attribute name="left"      value="/WEB-INF/jsp/layout/front/left.jsp"/>
+        <put-attribute name="content" 	value="/"/>
+        <put-attribute name="footer"    value="/WEB-INF/jsp/layout/front/footer.jsp"/>
+    </definition>
+
+	<!-- ADMIN TOP, FOOTER 레이아웃 -->
+	<definition name="layout_tf_admin" template="/WEB-INF/jsp/layout/admin/layout_tf.jsp">
+        <put-attribute name="header"	value="/WEB-INF/jsp/layout/admin/header.jsp"/>
+        <put-attribute name="top"		value="/WEB-INF/jsp/layout/admin/top.jsp"/>
+        <put-attribute name="content" 	value="/"/>
+        <put-attribute name="footer"    value="/WEB-INF/jsp/layout/admin/footer.jsp"/>
+    </definition>
+
+	<!-- FRONT TOP, FOOTER 레이아웃 -->
+	<definition name="layout_tf_front" template="/WEB-INF/jsp/layout/front/layout_tf.jsp">
+        <put-attribute name="header"	value="/WEB-INF/jsp/layout/front/header.jsp"/>
+        <put-attribute name="top"		value="/WEB-INF/jsp/layout/front/top.jsp"/>
+        <put-attribute name="content" 	value="/"/>
+        <put-attribute name="footer"    value="/WEB-INF/jsp/layout/front/footer.jsp"/>
+    </definition>
+
+    <!-- FRONT TOP, FOOTER 레이아웃(메인) -->
+    <definition name="layout_tf_front_main" template="/WEB-INF/jsp/layout/front/layout_tf_main.jsp">
+        <put-attribute name="header"    value="/WEB-INF/jsp/layout/front/header.jsp"/>
+        <put-attribute name="top"       value="/WEB-INF/jsp/layout/front/top.jsp"/>
+        <put-attribute name="content"   value="/"/>
+        <put-attribute name="footer"    value="/WEB-INF/jsp/layout/front/footer.jsp"/>
+    </definition>
+
+
+    <!-- FOOTER,TOP(IMAGE) 레이아웃 -->
+	<definition name="layout_m_front" template="/WEB-INF/jsp/layout/front/layout_m.jsp">
+		<put-attribute name="header"	value="/WEB-INF/jsp/layout/front/header.jsp"/>
+		<put-attribute name="top"		value="/WEB-INF/jsp/layout/front/m_top.jsp"/>
+        <put-attribute name="content" 	value="/"/>
+        <put-attribute name="footer"    value="/WEB-INF/jsp/layout/front/m_footer.jsp"/>
+    </definition>
+
+	<!-- ADMIN popup, 전체화면 레이아웃 -->
+	<definition name="layout_empty_admin" template="/WEB-INF/jsp/layout/admin/layout_empty.jsp">
+        <put-attribute name="header"	value="/WEB-INF/jsp/layout/admin/header.jsp"/>
+        <put-attribute name="content" 	value="/"/>
+    </definition>
+
+	<!-- FRONT popup, 전체화면 레이아웃 -->
+	<definition name="layout_empty_front" template="/WEB-INF/jsp/layout/front/layout_empty.jsp">
+        <put-attribute name="header"	value="/WEB-INF/jsp/layout/front/header.jsp"/>
+        <put-attribute name="content" 	value="/"/>
+    </definition>
+
+</tiles-definitions>

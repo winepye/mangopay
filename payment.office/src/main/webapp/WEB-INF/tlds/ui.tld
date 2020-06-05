@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE taglib
+    PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+    "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+
+    <tlib-version>1.1</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>ui</short-name>
+
+    <display-name>UI</display-name>
+    <description>UI Tag Library</description>
+
+    <!-- 상수-->
+    <tag>
+        <name>useConstants</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.jstlConstants.JstlUseConstantsTag</tag-class>
+        <body-content>empty</body-content>
+        <description>JSTL useConstants Tag</description>
+        <attribute>
+            <name>var</name>
+            <required>yes</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>className</name>
+            <required>yes</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>scope</name>
+            <required>no</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+    </tag>
+    <!-- Base Value-->
+    <tag>
+        <name>baseValue</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.baseValue.BaseValueTag</tag-class>
+        <body-content>empty</body-content>
+        <description>JSTL useConstants Tag</description>
+        <attribute>
+            <name>var</name>
+            <required>yes</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>scope</name>
+            <required>no</required>
+            <rtexprvalue>no</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>pagiNavigation</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.pagination.PaginationTag</tag-class>
+        <body-content>empty</body-content>
+        <description>Pagination Tag</description>
+        <attribute>
+            <name>paginationInfo</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>type</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>jsFunction</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+	<!-- 공통 파일 업로드 펑션 -->
+    <tag>
+        <name>fileUpload</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.file.FileUploadTag</tag-class>
+        <body-content>empty</body-content>
+        <description>fileUpload Tag</description>
+        <attribute>
+            <name>fileTypeCd</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>atchFileGrpSeq</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>maxCount</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>maxVolume</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>fileAllowExtType</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>viewMode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <!-- 공통 파일 뷰 펑션 -->
+    <tag>
+        <name>fileView</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.file.FileViewTag</tag-class>
+        <body-content>empty</body-content>
+        <description>fileView Tag</description>
+        <attribute>
+            <name>fileTypeCd</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>atchFileGrpSeq</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>viewMode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>viewTitle</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <!-- 공통 코드 뷰 펑션 -->
+    <tag>
+        <name>code</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.code.CodeTag</tag-class>
+        <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>cdGrp</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>cd</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>attr</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>subjectText</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>subjectValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>labelAttr</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>prefix</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>postfix</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>useType</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <!-- 메뉴 네비게이션 -->
+    <tag>
+        <name>menuNavigation</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.displayNavigation.MenuNavigationTag</tag-class>
+        <body-content>JSP</body-content>
+        <description>fileView Tag</description>
+        <attribute>
+            <name>location</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>currentUrl</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <!-- 화면 타이틀/설명 -->
+    <tag>
+        <name>jspTitleTag</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.displayNavigation.JspTitleTag</tag-class>
+        <body-content>JSP</body-content>
+        <description>fileView Tag</description>
+        <attribute>
+            <name>pageUrl</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <!-- 기업검색-->
+    <tag>
+        <name>corpSearchTag</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.corp.CorpSearchTag</tag-class>
+        <body-content>JSP</body-content>
+        <description>fileView Tag</description>
+        <attribute>
+            <name>corpNmAttr</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>corpInfoSeqSelectAttr</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>corpNm</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>corpInfoSeq</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>searchPoolYn</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>corpNmClass</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>corpInfoSeqClass</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>firstSel</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+    <!-- 회원검색-->
+    <tag>
+        <name>userSearchTag</name>
+        <tag-class>kr.co.smartdatacorp.web.bean.taglib.user.UserSearchTag</tag-class>
+        <body-content>JSP</body-content>
+        <description>fileView Tag</description>
+        <attribute>
+            <name>searchUserNmAttr</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>searchUserSeqSelectAttr</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>searchUserNm</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>searchUserSeq</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>searchUserNmClass</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>searchUserSeqClass</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>
