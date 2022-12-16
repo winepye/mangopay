@@ -10,7 +10,7 @@
     <url>http://www.egovframe.go.kr</url>
 
     <properties>
-        <spring.maven.artifact.version>3.1.1.RELEASE</spring.maven.artifact.version>
+        <spring.maven.artifact.version>5.2.20.RELEASE</spring.maven.artifact.version>
         <org.apache.tiles-version>2.2.2</org.apache.tiles-version>
         <encoding>UTF-8</encoding>
     </properties>
